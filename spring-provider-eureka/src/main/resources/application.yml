@@ -1,0 +1,38 @@
+server:
+  port: 7900
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  application:
+    name: provider-eureka-demo
+
+logging:
+  level:
+    config: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    com.chen: DEBUG
+
+management:
+  security: 
+    enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password@peer2:8802/eureka/
+#    healthcheck: 
+#      enable: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${server.port}}
+  
+

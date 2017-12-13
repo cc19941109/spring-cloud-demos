@@ -1,0 +1,24 @@
+server:
+  port: 7901
+spring:
+  application:
+    name: spring-consumer-movie
+
+user:
+  servicepath: http://localhost:7900/simple/
+  
+management:
+  security: 
+    enabled: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password@peer2:8802/eureka/
+#    healthcheck: 
+#      enable: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${server.port}}
+  
+  
