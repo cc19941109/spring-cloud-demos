@@ -1,8 +1,6 @@
-server:
-  port: 7901
 spring:
   application:
-    name: spring-consumer-movie
+    name: spring-consumer-movie+feign
 
 user:
   servicepath: http://localhost:7900/simple/
