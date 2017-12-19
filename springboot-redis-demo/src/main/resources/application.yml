@@ -1,0 +1,15 @@
+server:
+  port: 8800
+
+spring:
+  redis:
+    database: 1
+    host: 10.6.5.42
+    port: 6379
+    timeout: 0
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 500
+      min-idle: 0
+

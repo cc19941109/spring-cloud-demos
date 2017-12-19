@@ -1,0 +1,11 @@
+xdiamond:
+  client:
+    groupid: com.motherboard
+    artifactid: cilentDemo
+    version: 0.0.1-SNAPSHOT
+    profile: dev
+    secretkey: 123456
+    default: 123456
+  server:
+    host: localhost
+    port: 5678
