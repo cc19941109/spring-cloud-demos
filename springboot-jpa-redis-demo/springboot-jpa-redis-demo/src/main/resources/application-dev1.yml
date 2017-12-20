@@ -1,0 +1,31 @@
+server:
+  port: 8811
+
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatisdemo
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 10.6.5.42
+    port: 6379
+    password: 123456
+    timeout: 0
+    database: 0
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 500
+      min-idle: 0
+  cache:
+    type: REDIS
+
+logging:
+  level:
+    com:
+      chen:
+        springbootjparedisdemo:
+          service: debug

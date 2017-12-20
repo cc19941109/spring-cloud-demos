@@ -1,0 +1,11 @@
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password@peer2:8802/eureka/
+
+spring:
+  profiles:
+    active: dev1
+  application:
+    name: springboot-jpa-redis-demo
